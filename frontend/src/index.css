@@ -1,0 +1,40 @@
+@import 'tailwindcss';
+
+@variant dark (.dark &);
+
+@theme {
+  --font-sans:
+    'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display:
+    'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  /* Organic palette — Pine · Olive · Cornsilk · Earth yellow */
+  --color-earth-pine: #283618;
+  --color-earth-olive: #606c38;
+  --color-earth-cream: #fefae0;
+  --color-earth-ochre: #dda15e;
+  --color-earth-forest: #1e2a14;
+  --color-earth-sage: #3d4f2e;
+  --color-earth-mist: #f5efd3;
+  --color-earth-ochre-muted: rgba(221, 161, 94, 0.22);
+  --color-earth-olive-muted: rgba(96, 108, 56, 0.18);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: var(--color-earth-ochre-muted);
+  color: var(--color-earth-pine);
+}
+
+.dark ::selection {
+  background-color: rgba(221, 161, 94, 0.35);
+  color: var(--color-earth-cream);
+}
